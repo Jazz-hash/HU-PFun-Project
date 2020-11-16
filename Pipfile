@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 requests = "*"
 selectorlib = "*"
+flask = "*"
 
 [dev-packages]
 

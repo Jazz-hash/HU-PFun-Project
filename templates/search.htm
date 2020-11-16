@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>WebCrawler | We </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&display=swap');
+        * {
+            font-family: "Acme";
+        }
+
+    </style>
+  </head>
+  <body style="height: 100% !important;" class="container"> 
+    <div class="p-5">
+        <div class="row">
+            <h1><a href="/" class="text-dark"><i class="fa fa-chevron-left"></i></a></h1>
+            <div class="col ml-3">
+                <h1>You searched for "{{search}}" ...</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col bg-light mt-3 m-1">d</div>
+            <div class="col bg-light mt-3 m-1">s</div>
+            <div class="col bg-light mt-3 m-1">d</div>
+        </div>
+        <div class="row">
+            <div class="col mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Best Found: &nbsp;<span  class="text-danger">[link](https://www.something.com/)</span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+
+    <script src="{{ url_for('static', filename= 'js/jquery-3.3.1.slim.min.js') }}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

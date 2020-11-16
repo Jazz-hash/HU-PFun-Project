@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>WebCrawler | We </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&display=swap');
+        * {
+            font-family: "Acme";
+        }
+.styled-font {
+    font-family: "Pacifico", cursive;
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+input:focus {
+    border-color: black !important;
+}
+    </style>
+  </head>
+  <body style="height: 100% !important;"> 
+      <div style="align-items: center; justify-content: center; display: flex; flex-direction: column; margin: 13%;">
+        <h1 class="styled-font w-75 text-center" style="font-size: 80px;margin-bottom: 40px;">WebCrawler</h1>
+          <!-- Actual search box -->
+          <form class=" w-50" id="search-form">
+
+  <div class="form-group has-search">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input type="text" id="text" class="form-control shadow" placeholder="Search ...">
+    <small id="helpId" class="form-text text-muted text-center mt-4">We make your life easier... !!</small>
+    <input type="submit" style="display: none;" id="submit">
+
+  </div>
+       
+
+</form>
+
+    <script src="{{ url_for('static', filename= 'js/jquery-3.3.1.slim.min.js') }}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $("#search-form").submit(function(e){
+        e.preventDefault();
+        var text = $("#text").val()
+        window.location.href = "/search?s=" + text;
+      });
+    </script>
+  </body>
+</html>
