@@ -11,7 +11,21 @@
         * {
             font-family: "Acme";
         }
+        .bg-min {
+            background: linear-gradient(90deg, #11998e 0,#38ef7d);
+            border: none !important;
 
+        }
+        .bg-mid {
+            background: linear-gradient(90deg,#bdc3c7 0,#2c3e50);;
+            border: none !important;
+
+        }
+        .bg-max {
+            background: linear-gradient(90deg,#ed213a 0,#93291e);
+            border: none !important;
+
+        }
     </style>
   </head>
   <body style="height: 100% !important;" class="container"> 
@@ -22,20 +36,51 @@
                 <h1>You searched for "{{search}}" ...</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col bg-light mt-3 m-1">d</div>
-            <div class="col bg-light mt-3 m-1">s</div>
-            <div class="col bg-light mt-3 m-1">d</div>
-        </div>
-        <div class="row">
-            <div class="col mt-3">
-                <div class="card">
+        <div class="row  text-white">
+            <div class="col-4 mt-3">
+                <div class="card shadow bg-min">
                     <div class="card-body">
-                        <h4 class="card-title">Best Found: &nbsp;<span  class="text-danger">[link](https://www.something.com/)</span></h4>
+                        <h4 class="card-title">Least Expensive</h4>
+                        <p class="card-text">{{min_price}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mt-3">
+                <div class="card shadow bg-mid">
+                    <div class="card-body">
+                        <h4 class="card-title">Mid Ranged</h4>
+                        <p class="card-text">{{mid_price}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 mt-3">
+                <div class="card shadow bg-max">
+                    <div class="card-body">
+                        <h4 class="card-title">Most Expensive</h4>
+                        <p class="card-text">{{max_price}}</p>
                     </div>
                 </div>
             </div>
         </div>
+        <br />
+        <h3>Search Results</h3>
+        <hr />
+        <div class="row m-auto">
+            {% for data in products %}
+            <div class="col-6 mt-3 p-1">
+                <div class="card shadow {% if data.price == min_price %}bg-min text-white{% elif data.price == mid_price %}bg-mid text-white{% elif data.price == max_price %}bg-max text-white{% else %} {% endif %}">
+                    <div class="card-body">
+                        <h4 class="card-title">{{data.title}}</h4>
+                        <p class="card-text">Rating: {{data.rating}}</p>
+                        <p class="card-text">Reviews: {{data.reviews}}</p>
+                        <p class="card-text">Price: {{data.price}}</p>
+                        <p class="card-text"></p><a class="{% if data.price not in [max_price, min_price, mid_price] %}text-danger{% else %}text-white{% endif %}" target="_blank" href="https://www.amazon.com{{data.url}}">Want to know more > </a></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
     </div>
        
 

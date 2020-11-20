@@ -28,14 +28,18 @@ def scrape(url):
         return None
     return e.extract(r.text)
 
-with open('results/search_results_amazon.json','w') as outfile:
-    product = "note+20"
-    url = "https://www.amazon.com/s?k=" + product
-    data = scrape(url) 
-    if data:
-        for product in data['products'][:5]:
-            product['search_url'] = url
-            print("Saving Product: %s"%product['title'])
-            json.dump(product,outfile)
-            outfile.write("\n")
+# with open('results/search_results_amazon.json','w') as outfile:
+#     product = "note+20"
+#     url = "https://www.amazon.com/s?k=" + product
+#     data = scrape(url) 
+#     full_dict = []
+#     if data:
+#         for product in data['products'][:5]:
+#             product['search_url'] = url
+#             print("Saving Product: %s"%product['title'])
+#             full_dict.append(product)
+#             json.dump(product,outfile)
+#             outfile.write("\n")
+#     print(full_dict)
+        
     
