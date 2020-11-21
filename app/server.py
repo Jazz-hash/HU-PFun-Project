@@ -65,8 +65,7 @@ def index():
 @app.route('/search')
 def search_results():
     search = request.args.get('s')
-    product = search
-    url_amazon = "https://www.amazon.com/s?k=" + product
+    url_amazon = "https://www.amazon.com/s?k=" + search
     full_dict = []
     data_amazon = scrape(url_amazon) 
     if data_amazon:
