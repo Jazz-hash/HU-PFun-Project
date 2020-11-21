@@ -11,31 +11,63 @@
         * {
             font-family: "Acme";
         }
-.styled-font {
-    font-family: "Pacifico", cursive;
+        html, body {
+    height: 100%;
 }
-.has-search .form-control {
-    padding-left: 2.375rem;
-}
+        body {
+          background: url("{{ url_for('static', filename= 'images/back.jpg') }}");
+          background-size: cover; 
+          background-attachment: fixed;
 
-.has-search .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
+        }
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
 }
-input:focus {
-    border-color: black !important;
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
 }
+.content { 
+  display:flex;
+  margin: auto;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.93); 
+}
+      .styled-font {
+          font-family: "Pacifico", cursive;
+      }
+      .has-search .form-control {
+          padding-left: 2.375rem;
+      }
+
+      .has-search .form-control-feedback {
+          position: absolute;
+          z-index: 2;
+          display: block;
+          width: 2.375rem;
+          height: 2.375rem;
+          line-height: 2.375rem;
+          text-align: center;
+          pointer-events: none;
+          color: #aaa;
+      }
+      input:focus {
+          border-color: black !important;
+      }
     </style>
   </head>
-  <body style="height: 100% !important;"> 
-      <div style="align-items: center; justify-content: center; display: flex; flex-direction: column; margin: 13%;">
+  <body> 
+    <div class="main">
+      <div class="wrapper">
+      <div class="content">
         <h1 class="styled-font w-75 text-center" style="font-size: 80px;margin-bottom: 40px;">WebCrawler</h1>
           <!-- Actual search box -->
           <form class=" w-50" id="search-form">
@@ -43,13 +75,14 @@ input:focus {
   <div class="form-group has-search">
     <span class="fa fa-search form-control-feedback"></span>
     <input type="text" id="text" class="form-control shadow" placeholder="Search ...">
-    <small id="helpId" class="form-text text-muted text-center mt-4">We make your life easier... !!</small>
+    <small id="helpId" class="form-text text-muted h5 text-center mt-4">We make your life easier... !!</small>
     <input type="submit" style="display: none;" id="submit">
 
   </div>
        
 
 </form>
+</div></div>
 
     <script src="{{ url_for('static', filename= 'js/jquery-3.3.1.slim.min.js') }}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

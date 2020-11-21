@@ -8,7 +8,7 @@ data = [{"title": "Samsung Electronics Galaxy Note 20 5G Factory Unlocked Androi
 from math import ceil
 
 prices = sorted([float(item["price"][1:].replace(",", "")) for item in data if item["price"]])
-max_price = "${:,}".format(max(prices))
+max_price = "${:,.2f}".format(max(prices))
 mid_price = "${:,}".format(prices[len(prices) // 2])
-min_price = "${:,}".format(min(prices))
+min_price = "${:,.2f}".format(min(prices))
 print(min_price, mid_price, max_price)
