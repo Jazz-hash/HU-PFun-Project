@@ -64,7 +64,8 @@ def index():
 
 @app.route('/search')
 def search_results():
-    product = request.args.get('s')
+    search = request.args.get('s')
+    product = search
     url_amazon = "https://www.amazon.com/s?k=" + product
     full_dict = []
     data_amazon = scrape(url_amazon) 
@@ -78,4 +79,4 @@ def search_results():
     min_price = "${:,.2f}".format(min(prices))
     print(min_price, max_price, mid_price)
 
-    return render_template('search.htm', search=product, products=full_dict, min_price=min_price, max_price=max_price, mid_price=mid_price)
+    return render_template('search.htm', search=search, products=full_dict, min_price=min_price, max_price=max_price, mid_price=mid_price)
