@@ -78,4 +78,4 @@ def search_results():
     min_price = "${:,.2f}".format(min(prices))
     print(min_price, max_price, mid_price)
 
-    return render_template('search.htm', search=search, products=full_dict, min_price=min_price, max_price=max_price, mid_price=mid_price)
+    return render_template('search.htm', search=product, products=full_dict, min_price=min_price, max_price=max_price, mid_price=mid_price)
