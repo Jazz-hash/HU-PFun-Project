@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from scrapper.amazon import scrape
+from amazon import scrape
 import json
 
 app = Flask(__name__)
