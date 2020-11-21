@@ -52,13 +52,8 @@ def scrape(url):
         'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
     }
 
-    print("Downloading %s"%url)
     r = requests.get(url, headers=headers)
     if r.status_code > 500:
-        if "To discuss automated access to Amazon data please contact" in r.text:
-            print("Page %s was blocked by Amazon. Please try using better proxies\n"%url)
-        else:
-            print("Page %s must have been blocked by Amazon as the status code was %d"%(url,r.status_code))
         return None
     return e.extract(r.text)
 
@@ -69,9 +64,7 @@ def index():
 
 @app.route('/search')
 def search_results():
-    search = request.args.get('s')
-    print(search)
-    product = search
+    product = request.args.get('s')
     url_amazon = "https://www.amazon.com/s?k=" + product
     full_dict = []
     data_amazon = scrape(url_amazon) 
