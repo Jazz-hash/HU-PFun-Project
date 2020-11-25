@@ -59,9 +59,11 @@
   python test.py
   Output: Test Passed ! All libraries working.
   ```
-- Importing variables - For linux users
-  `export FLASK_APP=app/server.py && export FLASK_ENV=development` - For windows users
-  ` SET FLASK_APP=app/server.py SET FLASK_ENV=development `
+- Importing variables
+  - For linux users
+    `export FLASK_APP=app/server.py && export FLASK_ENV=development`
+  - For windows users
+    `SET FLASK_APP=app/server.py SET FLASK_ENV=development`
 - Now for the final step
   ```
   flask run
