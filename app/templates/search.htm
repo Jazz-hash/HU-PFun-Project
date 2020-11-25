@@ -48,7 +48,7 @@
             </div>
         </div>
         <div class="row  text-white">
-            <div class="col-4 mt-3">
+            <div class="col-sm-12 col-md-4 mt-3">
                 <div class="card shadow bg-min">
                     <div class="card-body">
                         <h4 class="card-title">Least Expensive</h4>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4 mt-3">
+            <div class="col-sm-12 col-md-4 mt-3">
                 <div class="card shadow bg-mid">
                     <div class="card-body">
                         <h4 class="card-title">Mid Ranged</h4>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-4 mt-3">
+            <div class="col-sm-12 col-md-4 mt-3">
                 <div class="card shadow bg-max">
                     <div class="card-body">
                         <h4 class="card-title">Most Expensive</h4>
@@ -76,7 +76,7 @@
         <br />
         <h1 style="font-weight: 400; font-size: 3rem;">Search Results</h1>
         <hr />
-        <div class="row m-auto">
+        <div class="row">
             <div class="card-columns">
                 {% for data in products %}
                     <div class="card shadow {% if data.price == min_price %}bg-min text-white{% elif data.price == mid_price %}bg-mid text-white{% elif data.price == max_price %}bg-max text-white{% else %}text-dark {% endif %}">
