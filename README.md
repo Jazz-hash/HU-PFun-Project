@@ -6,9 +6,9 @@
 
 #### URL: [https://hu-web-crawler.herokuapp.com/](https://hu-web-crawler.herokuapp.com/)
 
-#### Environment: &nbsp; [![PyPI pyversions](https://img.shields.io/pypi/pyversions/ansicolortags.svg)](https://pypi.org/project/pip/)
+#### Environment: &nbsp; [![Python](https://img.shields.io/badge/Python-3.5%20and%20above-blue.svg)](https://pypi.org/project/pip/)
 
-- Tested and verified by github actions [https://github.com/Jazz-hash/HU-PFun-Project/actions](https://github.com/Jazz-hash/HU-PFun-Project/actions)
+#### Tested and verified by github actions: &nbsp; [![PFUN Project](https://github.com/Jazz-hash/HU-PFun-Project/workflows/PFUN%20Project/badge.svg)](https://github.com/Jazz-hash/HU-PFun-Project/actions/runs/383997240)
 
 ## Prerequisite
 
@@ -63,7 +63,7 @@
   - For linux users
     `export FLASK_APP=app/server.py && export FLASK_ENV=development`
   - For windows users
-    `SET FLASK_APP=app/server.py SET FLASK_ENV=development`
+    `SET FLASK_APP=app/server.py ; SET FLASK_ENV=development`
 - Now for the final step
   ```
   flask run

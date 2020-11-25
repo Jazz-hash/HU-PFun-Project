@@ -10,7 +10,7 @@ Note: For better Documentation visit github
 
 ----------------------------------------------------------------------------------
 
-Environment: Python 2.7, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9 
+Environment: Python 3.5 and above 
 Source: https://pypi.org/project/pip/)
 
 Tested and verified by github actions 
