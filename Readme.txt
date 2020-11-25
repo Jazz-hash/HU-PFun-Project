@@ -3,10 +3,11 @@ Semester 1 Project - Programming Fundamentals - Web Crawler
 
 ----------------------------------------------------------------------------------
 
-Github URL:https://github.com/Jazz-hash/HU-PFun-Project
 URL: https://hu-web-crawler.herokuapp.com/
+Documentation URL: https://jazz-hash.github.io/HU-PFun-Project/
+Github Repository URL:https://github.com/Jazz-hash/HU-PFun-Project
 
-Note: For better Documentation visit github
+Note: For better Documentation visit "Documentation URL" 
 
 ----------------------------------------------------------------------------------
 
