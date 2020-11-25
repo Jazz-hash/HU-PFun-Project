@@ -9,6 +9,6 @@ from math import ceil
 
 prices = sorted([float(item["price"][1:].replace(",", "")) for item in data if item["price"]])
 max_price = "${:,.2f}".format(max(prices))
-mid_price = "${:,}".format(prices[len(prices) // 2])
+mid_price = "${:,.2f}".format(prices[len(prices) // 2])
 min_price = "${:,.2f}".format(min(prices))
 print(min_price, mid_price, max_price)

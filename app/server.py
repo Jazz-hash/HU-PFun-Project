@@ -73,6 +73,7 @@ def search_results():
             product['search_url'] = url_amazon
             full_dict.append(product)
     prices = sorted([float(item["price"][1:].replace(",", "")) for item in full_dict if item["price"]])
+
     max_price = "${:,.2f}".format(max(prices))
     mid_price = "${:,.2f}".format(prices[len(prices) // 2])
     min_price = "${:,.2f}".format(min(prices))
