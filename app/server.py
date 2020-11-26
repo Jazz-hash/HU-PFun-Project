@@ -84,7 +84,7 @@ def search_results():
     full_dict = []
     # ? storing data returned from the function.
     data_amazon = scrape(url_amazon) 
-    print("data_amazon:", data_amazon)
+    print("data_amazon:", len(data_amazon))
     # ? pushing data to dict for better error handling.
     if data_amazon:
         for product in data_amazon['products']:
