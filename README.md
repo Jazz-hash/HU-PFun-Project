@@ -1,4 +1,3 @@
-
 # HU-PFun-Project
 
 ## Semester 1 Project - Programming Fundamentals
@@ -99,9 +98,8 @@
 
 ![index](https://github.com/Jazz-hash/HU-PFun-Project/blob/main/screenshots/search.png?raw=true)
 
-- Least Expensive, Mid ranged and Most expensive priced products and their furthur specifications and options are shown with the same background color below to guide you through the result.
-- Also you can click on " Want to know more > " to get to the product source page.
+- Least Expensive, Mid ranged and Most expensive priced products and their further specifications and options are shown with the same background colour below to guide you through the result.
+- Also, you can click on " Want to know more > " to get to the product source page.
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)&nbsp;![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 ]()
-
