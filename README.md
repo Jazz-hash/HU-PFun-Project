@@ -65,6 +65,7 @@
   - For windows users
     `SET FLASK_APP=app/server.py ; SET FLASK_ENV=development`
 - Now for the final step
+
   ```
   flask run
   Output:
@@ -76,6 +77,7 @@
    * Debugger is active!
    * Debugger PIN: 164-091-533
   ```
+
 - Open browser and enter address [http://127.0.0.1:5000/](http://127.0.0.1:5000/) and hit enter.
 
 ### Magic happens !!
