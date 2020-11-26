@@ -1,3 +1,4 @@
+
 # HU-PFun-Project
 
 ## Semester 1 Project - Programming Fundamentals
@@ -82,11 +83,25 @@
 
 ### Magic happens !!
 
-- Refer to project manual for instructions located in <b>docs</b> folder on how to use this efficient tool.
+- Refer to <b>Application Usage</b> (given below) for instructions or go through the Project Manual located in <b>docs</b> folder on how to use this efficient tool.
 - Docs: `cd <project-main-directory>/docs/`
   - Project-Report.pdf
   - Project-Manual.pdf
 - Video: [Click here !](https://drive.google.com/file/d/1iXGdbSQzdcHMSISSeLjCFeqlFeMaN1br/view?usp=sharing)
 
+## Application Usage
+
+- Open [https://hu-web-crawler.herokuapp.com/](https://hu-web-crawler.herokuapp.com/) or run locally by going through the <b> Available Scripts </b> section.
+
+![index](https://github.com/Jazz-hash/HU-PFun-Project/blob/main/screenshots/index.png?raw=true)
+
+- Search for any product like "Samsung Note 20".
+
+![index](https://github.com/Jazz-hash/HU-PFun-Project/blob/main/screenshots/search.png?raw=true)
+
+- Least Expensive, Mid ranged and Most expensive priced products and their furthur specifications and options are shown with the same background color below to guide you through the result.
+- Also you can click on " Want to know more > " to get to the product source page.
+
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)&nbsp;![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 ]()
+
