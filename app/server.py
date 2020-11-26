@@ -84,9 +84,10 @@ def search_results():
     full_dict = []
     # ? storing data returned from the function.
     data_amazon = scrape(url_amazon) 
+    print("data_amazon:", data_amazon)
     # ? pushing data to dict for better error handling.
     if data_amazon:
-        for product in data_amazon['products'][:12]:
+        for product in data_amazon['products']:
             product['search_url'] = url_amazon
             full_dict.append(product)
     prices = sorted([float(item["price"][1:].replace(",", "")) for item in full_dict if item["price"]])
@@ -95,7 +96,6 @@ def search_results():
     max_price = "${:,.2f}".format(max(prices))
     mid_price = "${:,.2f}".format(prices[len(prices) // 2])
     min_price = "${:,.2f}".format(min(prices))
-    print(min_price, max_price, mid_price)
 
     # ? finally rendering everything to the htm file.
     return render_template('search.htm', search=search, products=full_dict, min_price=min_price, max_price=max_price, mid_price=mid_price)
