@@ -64,7 +64,7 @@ def scrape(url):
     r = requests.get(url, headers=headers)
     # ? Verifying sever response Error with codes.
     if r.status_code > 500:
-        return None
+        return {}
     # ? Extrating data from the repsonse obtained from the request.
     return e.extract(r.text)
 
@@ -79,17 +79,22 @@ def index():
 def search_results():
     # ? getting s (search_query) variable from the url.
     search = request.args.get('s')
+    if search == "":
+        return render_template("error.htm", search=search)
     # ? defined url
     url_amazon = "https://www.amazon.com/s?k=" + search
     full_dict = []
     # ? storing data returned from the function.
     data_amazon = scrape(url_amazon) 
+    
     print("data_amazon:", data_amazon)
     # ? pushing data to dict for better error handling.
     if data_amazon:
         for product in data_amazon['products']:
             product['search_url'] = url_amazon
             full_dict.append(product)
+    else:
+        return render_template("error.htm", search=search)
     prices = sorted([float(item["price"][1:].replace(",", "")) for item in full_dict if item["price"]])
     
     # ? Getting max, mid and min prices from the data.

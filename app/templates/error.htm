@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WebCrawler | We make your life easier... !!</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/bootstrap.min.css') }}"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Acme&family=Pacifico&display=swap");
+      * {
+        font-family: "Acme";
+      }
+      body {
+        background-color: #00000;
+        color: black;
+      }
+      .bg-mid {
+        background: #0f2027;
+        background: -webkit-linear-gradient(
+          to right,
+          #2c5364,
+          #203a43,
+          #0f2027
+        );
+        background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+        border: none !important;
+      }
+      .bg-min {
+        background: #00b4db;
+        background: -webkit-linear-gradient(to right, #0083b0, #00b4db);
+        background: linear-gradient(to right, #0083b0, #00b4db);
+        border: none !important;
+      }
+      .bg-max {
+        background: #ff416c;
+        background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+        background: linear-gradient(to right, #ff4b2b, #ff416c);
+        border: none !important;
+      }
+      .background-dark {
+        background-color: #060606;
+        color: white;
+      }
+
+      @media screen and (min-width: 768px) {
+        .card-columns {
+          column-count: 2 !important;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        .card-columns {
+          column-count: 3 !important;
+        }
+      }
+    </style>
+  </head>
+  <body style="height: 100% !important" class="container">
+    <div class="p-5">
+      <div class="row">
+        <h1>
+          <a href="/"><i class="fa fa-chevron-left"></i></a>
+        </h1>
+        <div class="col ml-3">
+          <h1>You searched for "{{search}}" ...</h1>
+        </div>
+      </div>
+      <div class="row text-white">
+        <div class="col-sm-12 col-md-4 mt-3">
+          <div class="card shadow bg-min">
+            <div class="card-body">
+              <h4 class="card-title">Least Expensive</h4>
+              <p class="card-text h3">$0.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 mt-3">
+          <div class="card shadow bg-mid">
+            <div class="card-body">
+              <h4 class="card-title">Mid Ranged</h4>
+              <p class="card-text h3">$0.00</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 mt-3">
+          <div class="card shadow bg-max">
+            <div class="card-body">
+              <h4 class="card-title">Most Expensive</h4>
+              <p class="card-text h3">$0.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <h1 style="font-weight: 400; font-size: 3rem">Search Results</h1>
+      <hr />
+      <div class="row">
+        <div class="col-12">
+          <div class="card shadow">
+            <div class="card-body">
+              <h4 class="card-title">Error</h4>
+              <p class="card-text">No data found or resource server busy !!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="{{ url_for('static', filename= 'js/jquery-3.3.1.slim.min.js') }}"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="{{ url_for('static', filename= 'js/bootstrap.min.js') }}"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
