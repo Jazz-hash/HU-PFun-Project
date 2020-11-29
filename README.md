@@ -17,6 +17,7 @@
 - python and pip ( version = "\*" )
 
   Visit [https://www.python.org/](https://www.python.org/) and download any version of python for your operating system.
+  Open command prompt/powershell/terminal in default python environment. 
 
   ```
   # For verification open command prompt or terminal and run
@@ -46,7 +47,7 @@
 
     `cd HU-PFun-Project-main/`
 
-- Install dependencies
+- Install dependencies via your powershell/terminal/cmd.
   ```
   pipenv install -r requirements.txt
   ```
